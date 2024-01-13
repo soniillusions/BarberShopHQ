@@ -64,6 +64,7 @@ GEM
       tilt (~> 2.0)
     sqlite3 (1.7.0)
       mini_portile2 (~> 2.8.0)
+    sqlite3 (1.7.0-x64-mingw32)
     tilt (2.3.0)
     timeout (0.4.1)
     tux (0.3.0)
