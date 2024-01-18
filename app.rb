@@ -11,7 +11,22 @@ end
 class Barber < ActiveRecord::Base
 end
 
+before do
+ @barbers = Barber.all
+end
+
 get '/' do
-	@barbers = Barber.all
 	erb :index
 end
+
+ get '/visit' do
+	 erb :visit
+ end
+
+ post '/visit' do
+	 @username = params[:name]
+	 @phone = params[:phone]
+	 @datestamp = params[:datetime]
+	 @barber = params[:barber]
+
+ end
