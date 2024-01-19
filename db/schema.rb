@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_01_18_114521) do
+ActiveRecord::Schema[7.1].define(version: 2024_01_19_121105) do
   create_table "barbers", force: :cascade do |t|
     t.text "name"
     t.datetime "created_at", null: false
@@ -23,6 +23,12 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_18_114521) do
     t.text "datestamp"
     t.text "barber"
     t.text "color"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "contacts", force: :cascade do |t|
+    t.text "message"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
