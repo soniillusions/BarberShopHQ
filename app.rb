@@ -28,13 +28,9 @@ end
  end
 
  post '/visit' do
-	 @username = params[:username]
-	 @phone = params[:phone]
-	 @datestamp = params[:datetime]
-	 @barber = params[:barber]
-	 @color = params[:colorpicker]
 
-	 Client.create :name => @username, :phone => @phone, :datestamp => @datestamp, :barber => @barber, :color => @color
+	 c = Client.new params[:client]
+	 c.save
 
 	 erb :visit
  end

@@ -4,29 +4,22 @@
 <form action="/visit" method="POST">
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Ваше имя</label>
-    <input name="username" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите ваше имя" value="<%= @username %>">
+    <input name="client[name]" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите ваше имя" value="">
   </div>
 
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Номер телефона</label>
-    <input name="phone" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите ваш номер телефона" value="<%= @phone %>">
+    <input name="client[phone]" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите ваш номер телефона" value="">
   </div>
 
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Время записи</label>
-    <input id="datetimepicker" name="datetime" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Когда вас ждать" value="<%= @datetime %>">
+    <input id="datetimepicker" name="client[datestamp]" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Когда вас ждать" value="">
   </div>
-
-  <label for="cars">Выберете парикмахера:</label>
-  <select name="barber" class="form-control">
-    <% @barbers.each do |barber| %>
-      <option> <%= @barber == barber['name'] ? 'selected' : '' %><%= barber['name'] %></option>
-    <% end %>
-  </select>
 
   <div class="mb-3">
     <label>В какие цвета хотите себя окрасить: </label>
-    <select name="colorpicker">
+    <select name="client[color]">
       <option value="#7bd148">Green</option>
       <option value="#5484ed">Bold blue</option>
       <option value="#a4bdfc">Blue</option>
@@ -47,7 +40,7 @@
 
 <script type="text/javascript">
     $(function() {
-        $('select[name="colorpicker"]').simplecolorpicker();
+        $('select[name="client[color]"]').simplecolorpicker();
         jQuery('#datetimepicker').datetimepicker();
     });
 </script>
