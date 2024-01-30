@@ -37,9 +37,9 @@ end
 	 if c.save
 		 erb "Спасибо, вы записались"
 	 else
-		 erb "Ошибка"
+		 @error = c.errors.full_messages.first
+		 erb :visit
 	 end
-
  end
 
  get '/contacts' do
