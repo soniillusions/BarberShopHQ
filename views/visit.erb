@@ -4,17 +4,17 @@
 <form action="/visit" method="POST">
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Ваше имя</label>
-    <input name="client[name]" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите ваше имя" value="">
+    <input name="client[name]" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите ваше имя" value="<%= @c.name %>">
   </div>
 
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Номер телефона</label>
-    <input name="client[phone]" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите ваш номер телефона" value="">
+    <input name="client[phone]" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите ваш номер телефона" value="<%= @c.phone %>">
   </div>
 
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Время записи</label>
-    <input id="datetimepicker" name="client[datestamp]" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Когда вас ждать" value="">
+    <input id="datetimepicker" name="client[datestamp]" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Когда вас ждать" value="<%= @c.datestamp %>">
   </div>
 
   <div class="mb-3">
