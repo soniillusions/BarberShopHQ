@@ -55,3 +55,7 @@ end
 	 erb :contacts
  end
 
+ get '/barber/:id' do
+	 erb :barber
+ end
+ 
