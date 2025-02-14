@@ -1,6 +1,6 @@
-# Sinatra Application
+# BarberShop
 
-BarberShop app with the ability to book an appointment with a barber. 
+Sinatra app for booking an appointment with a barber
 
 Also uses jQuery plugins DateTimePicker:
 <p align="center">
